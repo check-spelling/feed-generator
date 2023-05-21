@@ -40,7 +40,7 @@ Next you will need to do two things:
 
    For inspiration, we've provided a very simple feed algorithm (`whats-alf`) that returns all posts related to the titular character of the TV show ALF. 
 
-   You can either edit it or add another algorithm alongside it. The types are in place an dyou will just need to return something that satisfies the `SkeletonFeedPost[]` type.
+   You can either edit it or add another algorithm alongside it. The types are in place and you will just need to return something that satisfies the `SkeletonFeedPost[]` type.
 
 We've taken care of setting this server up with a did:web. However, you're free to switch this out for did:plc if you like - you may want to if you expect this Feed Generator to be long-standing and possibly migrating domains.
 
@@ -70,7 +70,7 @@ The skeleton that a Feed Generator puts together is, in its simplest form, a lis
 ]
 ```
 
-However, we include an additionl location to attach some context. Here is the full schema:
+However, we include an additional location to attach some context. Here is the full schema:
 
 ```ts
 type SkeletonItem = {
@@ -119,7 +119,7 @@ We provide utilities for verifying user JWTs in the `@atproto/xrpc-server` packa
 ### Pagination
 You'll notice that the `getFeedSkeleton` method returns a `cursor` in its response & takes a `cursor` param as input.
 
-This cursor is treated as an opaque value & fully at the Feed Generator's discretion. It is simply pased through the PDS directly to & from the client.
+This cursor is treated as an opaque value & fully at the Feed Generator's discretion. It is simply passed through the PDS directly to & from the client.
 
 We strongly encourage that the cursor be _unique per feed item_ to prevent unexpected behavior in pagination.
 
